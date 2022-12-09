@@ -1,4 +1,6 @@
 .page {
+  padding: 0;
+  margin: 0;
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
   /* поэтому выше установлена минимальная ширина страницы */
@@ -13,8 +15,6 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  padding: 0;
-  margin: 0;
   background-color: #f2f2f2;
   position: relative;
   display: flex;
@@ -86,7 +86,7 @@
 .two-columns {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 100px auto 100px;
   width: 80%;
 }
 
@@ -108,6 +108,7 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  margin-top: 30px;
 }
 
 .two-columns__paragraph:first-of-type {
@@ -118,10 +119,109 @@
   font-weight: 600;
 }
 
+.digits {
+  margin-top: 100px;
+}
+
+.section-title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  width: 60%;
+}
+
+.section-subtitle{
+  margin: 20px 0 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  width: 60%;
+}
+
+.table {
+  margin: 60px auto 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  max-width: 1100px;
+}
+
+.table__cell {
+  width: 250px;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 20px 0 0;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.feynman {
+  min-height: 890px;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+.feynman__title {
+  padding-top: 100px;
+  margin: 0 auto 70px;
+  width: 648px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.feyman__subtitle {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  position: relative;
+  z-index: 1;
+}
+
+.feynman__link {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color:#2f80ed;
+  text-decoration: none;
+}
+
+.feynman__img {
+  width: 867px;
+  height: 637px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url(../images/feynman.png);
 }
