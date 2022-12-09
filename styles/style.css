@@ -86,7 +86,7 @@
 .two-columns {
   display: flex;
   justify-content: space-between;
-  margin: 100px auto 100px;
+  margin: 0 auto;
   width: 80%;
 }
 
@@ -120,11 +120,11 @@
 }
 
 .digits {
-  margin-top: 100px;
+  margin: 100px auto 100px;
 }
 
 .section-title {
-  margin: 0;
+  margin: 0 auto;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
@@ -133,7 +133,7 @@
 }
 
 .section-subtitle{
-  margin: 20px 0 0;
+  margin: 20px auto 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
@@ -141,8 +141,20 @@
   width: 60%;
 }
 
+.section-title_theme_dark {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
 .table {
-  margin: 60px auto 100px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -150,8 +162,23 @@
   max-width: 1100px;
 }
 
+.table_theme_dark {
+  position: relative;
+  color: white;
+  z-index: 1;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
 .table__cell {
   width: 250px;
+  margin-top: 60px;
+}
+
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin: 80px 0 0;
 }
 
 .table__heading {
@@ -161,6 +188,10 @@
   margin: 0;
 }
 
+.table__heading_theme_dark {
+
+}
+
 .table__text {
   line-height: 1.2;
   font-size: 18px;
@@ -168,12 +199,8 @@
   margin-top: 20px 0 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
+.table__text_theme_dark {
+
 }
 
 .feynman {
@@ -224,4 +251,23 @@
   left: 0;
   background-size: cover;
   background-image: url(../images/feynman.png);
+}
+
+.kaufman {
+  margin: 0 auto;
+  padding: 90px 0;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  position: relative;
+
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0;
+  right: -210px;
+  width: 877px;
+  height: 877px;
+  background-size: cover;
+  background-image: url(../images/kaufman-triangle.svg);
 }
