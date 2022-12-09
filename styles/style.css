@@ -79,6 +79,45 @@
   right: 0;
 }
 
+.description {
+  margin-top: 100px;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.two-columns__brief {
+  color:#2f80ed;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  width: 175px;
+  margin-top: 0;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph:first-of-type {
+  margin-top: 0;
+}
+
+.two-columns__spane-selection {
+  font-weight: 600;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
