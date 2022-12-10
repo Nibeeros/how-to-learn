@@ -1,6 +1,4 @@
 .page {
-  padding: 0;
-  margin: 0;
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
   /* поэтому выше установлена минимальная ширина страницы */
@@ -262,8 +260,7 @@
 }
 
 .kaufman {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
   background-color: #1f1f1f;
@@ -297,7 +294,6 @@
 
 .footer__column {
   color: white;
-  min-height: 300px;
 }
 
 .footer__column_content_copyright {
@@ -314,9 +310,8 @@
   padding: 18px auto;
 }
 
-/* не нашёл что можно подставить в эти стили */
+/* не нашёл что можно подставить в эти стили, чего нет в других */
 /*.footer__coloumn_content-info {
-
 } */
 
 .footer__column-heading {
@@ -345,7 +340,7 @@
   color: white;
 }
 
-/* не нашёл что можно подставить в эти стили */
+/* не нашёл что можно подставить в эти стили, чего нет в других */
 /*.footer__coloumn_content-social {
 
 } */
