@@ -346,7 +346,7 @@
   text-decoration: none;
   color: white;
   line-height: 10px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .footer__column-link:hover {
