@@ -35,6 +35,12 @@
   background-image: url(../images/logo_place_header.svg);
   z-index: 2;
 }
+
+.logo_place-footer {
+  background-image: url(../images/logo_place_footer.svg);
+  z-index: 2;
+}
+
 .header__title {
   position: relative;
   line-height: 96px;
@@ -154,7 +160,7 @@
 }
 
 .table {
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -166,8 +172,6 @@
   position: relative;
   color: white;
   z-index: 1;
-  justify-content: space-between;
-  align-content: space-between;
 }
 
 .table__cell {
@@ -189,7 +193,9 @@
 }
 
 .table__heading_theme_dark {
-
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .table__text {
@@ -200,7 +206,9 @@
 }
 
 .table__text_theme_dark {
-
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .feynman {
@@ -254,6 +262,8 @@
 }
 
 .kaufman {
+  margin: 0;
+  padding: 0;
   margin: 0 auto;
   padding: 90px 0;
   overflow: hidden;
@@ -270,4 +280,78 @@
   height: 877px;
   background-size: cover;
   background-image: url(../images/kaufman-triangle.svg);
+}
+
+.footer {
+  background-color:#1f1f1f;
+  padding: 60px 0 40px;
+  min-height: 350px;
+  box-sizing: border-box;
+}
+
+.footer__columns {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.footer__column {
+  color: white;
+  min-height: 300px;
+}
+
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 18px auto;
+}
+
+/* не нашёл что можно подставить в эти стили */
+/*.footer__coloumn_content-info {
+
+} */
+
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer__column-links {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 20px;
+  padding-bottom: 16px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.footer__column-link {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+
+/* не нашёл что можно подставить в эти стили */
+/*.footer__coloumn_content-social {
+
+} */
+
+.footer__social-icon {
+  height: 16px;
+  width: 16px;
 }
