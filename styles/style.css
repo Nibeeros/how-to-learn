@@ -17,6 +17,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 1;
   /* выше установили ограничения для секции */
 }
 .logo {
@@ -26,27 +27,26 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.logo_place-header {
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
   background-image: url(../images/logo_place_header.svg);
-  z-index: 2;
 }
 
-.logo_place-footer {
+.logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
-  z-index: 2;
 }
 
 .header__title {
+  margin: 0;
+  padding: 0;
   position: relative;
   line-height: 96px;
-  width: 730px;
+  max-width: 730px;
   font-size: 102px;
   font-weight: 600;
   margin-left: 64px;
-  z-index: 2;
 }
 .header__subtitle {
   line-height: 25px;
@@ -56,22 +56,26 @@
   position: absolute;
   bottom: 30px;
   left: 64px;
-  z-index: 2;
   margin: 0;
 }
 .header__link {
   text-decoration: none;
   color:#2f80ed;
+  cursor: pointer;
 }
+
+.header__link:hover {
+  opacity: .5;
+}
+
 .header__main-illustration {
-  background-image: url(../images/header-image.png);
   background-size: cover;
   width: 765px;
   height: 608px;
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  z-index: -1;
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -81,6 +85,7 @@
   position: absolute;
   top: 64px;
   right: 0;
+  z-index: -2;
 }
 
 .description {
@@ -95,12 +100,13 @@
 }
 
 .two-columns__brief {
+  margin: 0;
+  padding: 0;
   color:#2f80ed;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   width: 175px;
-  margin-top: 0;
 }
 
 .two-columns__main-text {
@@ -109,17 +115,21 @@
 }
 
 .two-columns__paragraph {
+  margin: 30px 0 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin-top: 30px;
 }
 
 .two-columns__paragraph:first-of-type {
   margin-top: 0;
 }
 
-.two-columns__spane-selection {
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
+.two-columns__spane-accent {
   font-weight: 600;
 }
 
@@ -148,17 +158,17 @@
 .section-title_theme_dark {
   color: white;
   position: relative;
-  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
   color: white;
   position: relative;
-  z-index: 1;
 }
 
 .table {
   margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -169,7 +179,6 @@
 .table_theme_dark {
   position: relative;
   color: white;
-  z-index: 1;
 }
 
 .table__cell {
@@ -200,7 +209,7 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin-top: 20px 0 0;
+  margin: 20px 0 0;
 }
 
 .table__text_theme_dark {
@@ -213,6 +222,10 @@
   min-height: 890px;
   background-color: #f2f2f2;
   position: relative;
+  background-repeat: no-repeat;
+  background-image: url(../images/feynman.png);
+  background-size: 867px 637px;
+  background-position: 0% 100%;
 }
 
 .feynman__title {
@@ -224,7 +237,6 @@
   font-size: 120px;
   font-weight: 600;
   position: relative;
-  z-index: 1;
 }
 
 .feyman__subtitle {
@@ -234,7 +246,6 @@
   font-size: 36px;
   font-weight: normal;
   position: relative;
-  z-index: 1;
 }
 
 .feynman__link {
@@ -247,16 +258,12 @@
   font-weight: normal;
   color:#2f80ed;
   text-decoration: none;
+  z-index: 1;
+  cursor: pointer;
 }
 
-.feynman__img {
-  width: 867px;
-  height: 637px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-size: cover;
-  background-image: url(../images/feynman.png);
+.feynman__link:hover {
+  opacity: .5;
 }
 
 .kaufman {
@@ -265,6 +272,7 @@
   overflow: hidden;
   background-color: #1f1f1f;
   position: relative;
+  z-index: 1;
 
 }
 
@@ -276,6 +284,7 @@
   height: 877px;
   background-size: cover;
   background-image: url(../images/kaufman-triangle.svg);
+  z-index: -1;
 }
 
 .footer {
@@ -286,14 +295,15 @@
 }
 
 .footer__columns {
-  display: flex;
   margin: auto;
+  display: flex;
   justify-content: space-between;
   width: 90%;
 }
 
 .footer__column {
   color: white;
+  min-height: 250px;
 }
 
 .footer__column_content_copyright {
@@ -304,46 +314,44 @@
 }
 
 .footer__author {
+  margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  padding: 18px auto;
 }
 
-/* не нашёл что можно подставить в эти стили, чего нет в других */
-/*.footer__coloumn_content-info {
-} */
-
 .footer__column-heading {
+  margin: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
 }
 
 .footer__column-links {
+  margin: 0;
+  padding: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   margin-top: 20px;
   padding-bottom: 16px;
-  margin-left: 0;
-  padding-left: 0;
 }
 
-.footer__column-link {
+.footer__column-item {
   list-style-type: none;
   padding: 0;
 }
 
-.footer__link {
+.footer__column-link {
   text-decoration: none;
   color: white;
+  line-height: 10px;
+  cursor: pointer
 }
 
-/* не нашёл что можно подставить в эти стили, чего нет в других */
-/*.footer__coloumn_content-social {
-
-} */
+.footer__column-link:hover {
+  opacity: .5;
+}
 
 .footer__social-icon {
   height: 16px;
