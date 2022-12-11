@@ -129,7 +129,7 @@
   margin-bottom: 0;
 }
 
-.two-columns__spane-accent {
+.two-columns__span-accent {
   font-weight: 600;
 }
 
@@ -356,4 +356,5 @@
 .footer__social-icon {
   height: 16px;
   width: 16px;
+  margin-right: 10px;
 }
