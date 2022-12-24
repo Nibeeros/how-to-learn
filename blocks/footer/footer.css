@@ -3,4 +3,5 @@
     padding: 60px 0 40px;
     min-height: 350px;
     box-sizing: border-box;
+    display: flex;
   }

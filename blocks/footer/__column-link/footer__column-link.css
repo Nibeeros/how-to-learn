@@ -3,6 +3,7 @@
     color: white;
     line-height: 10px;
     cursor: pointer;
+    transition: .3s linear;
   }
 
   .footer__column-link:hover {
